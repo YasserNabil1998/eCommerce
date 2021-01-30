@@ -1,0 +1,24 @@
+function getAllFrom($tableName, $where = NULL) {
+    global $con;
+    if ($where == NULL) {
+        $sql = '';
+    } else {
+        $sql = 'where Approve = 1';
+    }
+    //$sql = $where == NULL ? '' : $where;
+    $getAll = $con->prepare("SELECT * FROM $tableName  $sql ORDER BY item_ID DESC");
+    $getAll->execute();
+    $all = $getAll->fetchAll();
+    return $all;
+}
+
+function getAllFrom($field, $table, $where = NULL, $and = NULL, $orderfield, $ordering = 'DESC') {
+
+
+enctype ="application/x-www-form-urlendo"> 
+هظا نوع تشفير 
+
+multipart/form-data للملفات 
+
+
+            //$avatarExtension = strtolower(end(explode('.', $avatarName)));
